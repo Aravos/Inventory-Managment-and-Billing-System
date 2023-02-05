@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="/static/supplier.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+   <body>
+    <div class="container">
+        <div class="text">BILL Summary</div>
+        {% for row in data %}
+        <div>
+            <td><p align="center">Bill Number: {{row.0}}</p></td>
+        </div>
+        <div>
+         <td><p align="center">Bill Total: {{row.1}}</p></td>
+     </div>
+        {% endfor %}
+     </div>
+   </body>
+</html>

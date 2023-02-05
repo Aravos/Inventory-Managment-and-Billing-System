@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="/static/supplier.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+   <body>
+    <div class="container">
+        <div class="text">Fill Product Data for Update</div>
+        <form action="#", method = "post">
+           <div class="form-row">
+              <div class="input-data">
+                 <input name = "product_id" type="text" required>
+                 <div class="underline"></div>
+                 <label >Product ID</label>
+              </div>
+              <div class="input-data">
+                 <input name = "quantity" type="text" required>
+                 <div class="underline"></div>
+                 <label for="">Update Stock</label>
+              </div>
+           </div>
+
+                 <div class="form-row submit-btn">
+                    <div class="input-data">
+                       <div class="inner"></div>
+                       <input type="submit" value="Next">
+                    </div>
+                 </div>
+
+        </form>
+        <table>
+         <tr>
+           <th>Product ID</th>
+           <th>Product Name</th>
+           <th>Product_Description</th>
+           <th>Price</th>
+           <th>Product Quantity</th>
+           <th>Supplier_ID</th>
+           <th>Category_ID</th>
+         </tr>
+         {% for row in product %}
+         <tr>
+             <div>
+                 <td>{{row.0}}</td>
+             </div>
+             <div>
+                 <td>{{row.1}}</td>
+               </div>
+               <div>
+                  <td>{{row.2}}</td>
+               </div>
+               <div>
+                  <td>{{row.3}}</td>
+               </div>
+               <div>
+                  <td>{{row.4}}</td>
+               </div>
+               <div>
+                  <td>{{row.5}}</td>
+               </div>
+               <div>
+                  <td>{{row.6}}</td>
+               </div>
+         </tr>
+         {% endfor %}
+      </table>
+     </div>
+   </body>
+</html>
